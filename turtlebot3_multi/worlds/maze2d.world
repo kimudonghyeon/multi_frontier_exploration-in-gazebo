@@ -1,0 +1,2171 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='smaze_wall'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-5.87796 11.48 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>2.08924 11.4631 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>10.0651 11.4575 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-8.71106 2.77837 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_0_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-9.62402 -0.444828 0 0 0 -1.56684</pose>
+    </model>
+    <model name='smaze_wall_0_clone_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-9.6041 -8.42815 0 0 0 -1.56684</pose>
+    </model>
+    <model name='smaze_wall_0_clone_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>14.2407 7.6391 0 0 0 -1.56684</pose>
+    </model>
+    <model name='smaze_wall_0_clone_clone_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>14.2663 -0.321399 0 0 0 -1.56684</pose>
+    </model>
+    <model name='smaze_wall_0_clone_clone_2'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>14.3176 -8.23074 0 0 0 -1.56684</pose>
+    </model>
+    <model name='smaze_wall_short'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-8.30521 -14.7662 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>14.333 -14.2331 0 0 0 -1.56779</pose>
+    </model>
+    <model name='smaze_wall_clone_0_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>10.483 -16.0983 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_clone_0_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>2.52604 -16.125 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_clone_0_clone_0_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-5.50612 -16.0849 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_0_clone_clone_2_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-2.4663 -12.1082 0 0 0 -1.56684</pose>
+    </model>
+    <model name='smaze_wall_short_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-4.69073 -8.277 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>8 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall/materials/scripts</uri>
+              <uri>model://smaze_wall/materials/textures</uri>
+              <name>vrc/smaze_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>5.83594 5.47494 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>12.1854 1.66978 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_2'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>7.10429 -3.8806 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>8.36611 -2.02763 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>6.56602 -3.88119 0 0 0 -1.5772</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.65899 -5.68194 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.57081 -10.1307 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>12.0384 -7.04133 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>10.2026 -9.12461 0 0 0 -1.5772</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_clone_0_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>7.78468 -13.2025 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.511 1.85751 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>2.67508 -0.031488 0 0 0 -1.5772</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone_1_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-2.19741 -0.049126 0 0 0 -1.5772</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_1_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-4.12174 -1.84994 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_1_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-7.49858 1.84254 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone_1_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>7.01286 9.41606 0 0 0 -1.5772</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone_1_clone_0_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-4.35306 9.33948 0 0 0 -1.5772</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_1_clone_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-1.58138 4.16685 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone_1_clone_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-0.557541 6.28529 0 0 0 -1.5772</pose>
+    </model>
+    <model name='smaze_wall_short_1_clone_clone_0_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-1.70412 -4.90919 0 0 -0 0</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone_0_clone'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.462859 -11.7288 0 0 0 -1.5772</pose>
+    </model>
+    <model name='smaze_wall_short_2_clone_1_clone_0_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 2.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.4 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://smaze_wall_short/materials/scripts</uri>
+              <uri>model://smaze_wall_short/materials/textures</uri>
+              <name>vrc/smaze_wall_short</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>9.85378 7.33675 0 0 0 -1.5772</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>524 571000000</sim_time>
+      <real_time>525 984140436</real_time>
+      <wall_time>1750654130 253073484</wall_time>
+      <iterations>524571</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall'>
+        <pose>-5.87796 11.48 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-5.87796 11.48 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_0'>
+        <pose>-9.66799 7.46871 0 0 0 -1.56684</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-9.66799 7.46871 2.5 0 0 -1.56684</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_0_clone'>
+        <pose>-9.62402 -0.444828 0 0 0 -1.56684</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-9.62402 -0.444828 2.5 0 0 -1.56684</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_0_clone_clone'>
+        <pose>-9.61407 -8.42819 0 0 0 -1.56684</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-9.61407 -8.42819 2.5 0 0 -1.56684</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_0_clone_clone_0'>
+        <pose>14.2407 7.6391 0 0 0 -1.56684</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>14.2407 7.6391 2.5 0 0 -1.56684</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_0_clone_clone_1'>
+        <pose>14.2663 -0.321399 0 0 0 -1.56684</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>14.2663 -0.321399 2.5 0 0 -1.56684</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_0_clone_clone_2'>
+        <pose>14.3176 -8.23074 0 0 0 -1.56684</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>14.3176 -8.23074 2.5 0 0 -1.56684</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_0_clone_clone_2_clone'>
+        <pose>-2.4663 -12.1082 0 0 0 -1.56684</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-2.4663 -12.1082 2.5 0 0 -1.56684</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_1'>
+        <pose>6.47176 5.47494 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>6.47176 5.47494 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_clone'>
+        <pose>2.08924 11.4631 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>2.08924 11.4631 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_clone_0'>
+        <pose>10.0651 11.4575 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>10.0651 11.4575 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_clone_0_clone'>
+        <pose>10.483 -16.0983 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>10.483 -16.0983 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_clone_0_clone_0'>
+        <pose>2.52604 -16.0895 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>2.52604 -16.0895 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_clone_0_clone_0_clone'>
+        <pose>-5.50612 -16.0849 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-5.50612 -16.0849 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short'>
+        <pose>-9.59773 -14.2731 0 0 0 -1.56779</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-9.59773 -14.2731 2.5 0 0 -1.56779</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_0'>
+        <pose>-4.69073 -8.277 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-4.69073 -8.277 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1'>
+        <pose>12.1854 1.66978 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>12.1854 1.66978 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone'>
+        <pose>8.36611 -2.02763 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>8.36611 -2.02763 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_0'>
+        <pose>12.0384 -7.04133 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>12.0384 -7.04133 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_1'>
+        <pose>4.511 1.85751 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.511 1.85751 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_1_clone'>
+        <pose>-4.12174 -1.84994 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-4.12174 -1.84994 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_1_clone_0'>
+        <pose>-7.49858 1.84254 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-7.49858 1.84254 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_1_clone_1'>
+        <pose>-1.58138 4.16685 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-1.58138 4.16685 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_clone'>
+        <pose>4.65899 -5.68194 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.65899 -5.68194 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_clone_0'>
+        <pose>4.57081 -10.1307 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.57081 -10.1307 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_clone_0_clone'>
+        <pose>7.78468 -13.2025 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>7.78468 -13.2025 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_1_clone_clone_0_clone_0'>
+        <pose>-1.70412 -4.90919 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-1.70412 -4.90919 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2'>
+        <pose>10.3881 -0.208757 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>10.3881 -0.208757 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone'>
+        <pose>6.56602 -3.88119 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>6.56602 -3.88119 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone_0'>
+        <pose>10.2026 -9.12461 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>10.2026 -9.12461 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone_0_clone'>
+        <pose>0.462859 -11.7288 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0.462859 -11.7288 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone_1'>
+        <pose>2.67508 -0.031488 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>2.67508 -0.031488 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone_1_clone'>
+        <pose>-2.19741 -0.049126 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-2.19741 -0.049126 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone_1_clone_0'>
+        <pose>4.38334 9.4329 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.38334 9.4329 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone_1_clone_0_clone'>
+        <pose>-4.35306 9.33948 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-4.35306 9.33948 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone_1_clone_0_clone_0'>
+        <pose>9.85378 7.33675 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>9.85378 7.33675 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_2_clone_1_clone_1'>
+        <pose>-0.557541 6.28529 0 0 0 -1.5772</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-0.557541 6.28529 2.5 0 0 -1.5772</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='smaze_wall_short_clone'>
+        <pose>14.333 -14.2331 0 0 0 -1.56779</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>14.333 -14.2331 2.5 0 0 -1.56779</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.4753 -4.05696 51.143 3.14159 1.57079 3.14159</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
